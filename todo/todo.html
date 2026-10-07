@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="productivity,digital,journaling,to-do list,reflections">
+    <meta name="description" content="All you need to achieve your goals and become better person then you were yesterday">
+    <title>Productivity Dashboard</title>
+    <link rel = "stylesheet" href="todo.css">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <h1>To Do</h1>
+        <p>"Quote"</p>
+        <ul>
+            <li><a href = ../home.html>Home</a></li>
+            <li><a href = ../journal/journal.html>Journal</a></li>
+            <li><a href = todo.html></a> </li>
+        </ul>
+    </header>
+    <!--Main content-->
+    <main>
+        <div class="add-task">
+            <input type ="text" placeholder="task...">
+            <select id="task-priority">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+            <select id="task-day">
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wedenesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+                <option value="sunday">Sunday</option>
+            </select>
+            <button class="add-task">Add Task</button>
+            <button class="clear-task">Clear task</button>
+        </div>
+        
+<div class="column" id="monday">
+    <h3 class="column-title">Monday</h3>
+    <ul class="monday-todo">
+
+    </ul>
+</div>
+<div class="column" id="tuesday">
+    <h3 class="column-title">Tuesday</h3>
+    <ul class="tuesday-todo">
+        
+    </ul>
+</div>
+<div class="column" id="wednesday">
+    <h3 class="column-title">Wednesday</h3>
+    <ul class="wednesday-todo">
+        
+    </ul>
+</div>
+<div class="column" id="thursday">
+    <h3 class="column-title">Thursday</h3>
+    <ul class="thursday-todo">
+        
+    </ul>
+</div>
+<div class="column" id="friday">
+    <h3 class="column-title">Friday</h3>
+    <ul class="friday-todo">
+        
+    </ul>
+</div>
+<div class="column" id="saturday">
+    <h3 class="column-title">Saturday</h3>
+    <ul class="saturday-todo">
+        
+    </ul>
+</div>
+<div class="column" id="sunday">
+    <h3 class="column-title">Sunday</h3>
+    <ul class="sunday-todo">
+        
+    </ul>
+</div>
+
+
+    </main>
+
+    <footer class="weekly-goals">
+        <h3>Weekly Goals</h3>
+      <textarea rows="10" cols="150" placeholder="1.
+2.
+3.
+4.
+5."></textarea>
+    </footer>
+    <script src="todo.js"></script>
+</body>

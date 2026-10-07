@@ -3,10 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="productivity,digital,journaling,to-do list,reflections">
+    <meta name="description" content="All you need to achieve your goals and become better person then you were yesterday">
     <title>Productivity Dashboard</title>
     <link rel = "stylesheet" href="home.css">
 </head>
 <body>
-    
+    <!--Header-->
+    <header>
+        <h1>Productivity Dashboard</h1>
+        <ul>
+            <li><a href  = home.html>Home</a></li>
+            <li><a href = #about>About us</a></li>
+            <li><a href = todo/todo.html>To-Do</a> </li>
+            <li><a href = journal/journal.html>Journal</a></li>
+            <li><a href = #contact>Contact</a></li>
+
+        </ul>
+    </header>
+    <!--About-->
+    <main id ="about">
+        <h3>About us</h3>
+
+    </main>
+    <section id = aboutodo>
+<h3>About ToDo</h3>
+    </section>
+    <section id = aboutjournal>
+<h3>About Journal</h3>
+    </section>
+<!--Contact form-->
+    <footer id = "contact">
+        <div class="form">
+<h3>Contact form</h3>
+
+<form action="submit" method="post">
+    <label for="name">First Name</label>
+    <input type="text" id="fname" name="fname" placeholder="Please Enter First Name" required>
+    <label for="name">Last Name</label>
+    <input type="name" id="lname" name="lname" placeholder="Please Enter Last Name" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="@email.com" required>
+    <label for="number">Phone Number</label>
+    <input type="number" id="pnumber" name="pnumber" placeholder="+381xxxxxxxxx" required>
+</form>
+</div>
+    </footer>
 </body>
 </html>
