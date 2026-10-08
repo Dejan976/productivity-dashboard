@@ -25,6 +25,9 @@ const li = document.createElement("li");
 li.classList.add("task-card")
 li.dataset.id = task.id;
 li.dataset.priority = task.priority;
+if(task.completed){
+    li.classList.add("completed");
+}
 const title = document.createElement("p");
 title.classList.add("task-title"); 
 title.textContent = task.title;
@@ -40,6 +43,7 @@ removeBtn.textContent = "Remove";
 completeBtn.addEventListener("click",()=>{
     task.completed = !task.completed;
     li.classList.toggle("completed",task.completed);
+    localStorage.setItem("tasks",JSON.stringify(tasks));
 });
 
 removeBtn.addEventListener("click",()=>{
