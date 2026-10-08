@@ -38,7 +38,8 @@ removeBtn.classList.add("remove-btn");
 removeBtn.textContent = "Remove";
 
 completeBtn.addEventListener("click",()=>{
-    li.classList.toggle("completed");
+    task.completed = !task.completed;
+    li.classList.toggle("completed",task.completed);
 });
 
 removeBtn.addEventListener("click",()=>{
@@ -64,7 +65,8 @@ const task = {
     id:Date.now(),
     title:title,
     priority:priority,
-     day:day
+     day:day,
+     completed:false
     }
 
 tasks.push(task);
