@@ -6,3 +6,7 @@
     margin: 2px;
     text-align: center;
 }
+.task-card.completed .task-title {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
