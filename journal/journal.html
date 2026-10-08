@@ -14,17 +14,22 @@
         <h1>Journal</h1>
         <p>"Quote"</p>
         <ul>
-            <li><a href = ../home.html>Home</a></li>
-            <li><a href = ../todo/todo.html>To-Do</a> </li>
-            <li><a href = journal.html></a></li>
+            <li><a href ="../home.html">Home</a></li>
+            <li><a href = "../todo/todo".html>To-Do</a> </li>
+            <li><a href = "journal.html"></a></li>
         </ul>
+        <div id="weather">
+            <h2 id="city"></h2>
+            <span id="weather-icon"></span>
+            <p id="temperature"></p>
+        </div>
     </header>
-    <!--Main-content--->
+    <!--Main-content not working atm--->
     <main>
 <h2>Whats on your mind</h2>
 <textarea rows="30" cols="180" placeholder="Type here"></textarea>
     </main>
-
+<!--Daily reflection section not working atm-->
     <footer>
   <h2>Daily Reflection</h2>
         <div>
@@ -37,6 +42,8 @@
 </div>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script src="journal.js"></script>
 </body>
 </html>

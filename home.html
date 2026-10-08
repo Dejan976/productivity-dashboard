@@ -13,11 +13,11 @@
     <header>
         <h1>Productivity Dashboard</h1>
         <ul>
-            <li><a href  = home.html>Home</a></li>
-            <li><a href = #about>About us</a></li>
-            <li><a href = todo/todo.html>To-Do</a> </li>
-            <li><a href = journal/journal.html>Journal</a></li>
-            <li><a href = #contact>Contact</a></li>
+            <li><a href  ="home.html">Home</a></li>
+            <li><a href = "#about">About us</a></li>
+            <li><a href = "todo/todo.html">To-Do</a> </li>
+            <li><a href = "journal/journal.html">Journal</a></li>
+            <li><a href = "#contact">Contact</a></li>
 
         </ul>
     </header>
@@ -25,27 +25,52 @@
     <main id ="about">
         <h3>About us</h3>
 
+<p>Welcome to Productivity Dashboard — a simple space designed to help you stay organized, focused, and consistent.
+
+Our goal is to bring the tools you need for everyday productivity into one place. You can manage your tasks with the To-Do list, write down your thoughts and reflections in the Journal, set weekly goals, and keep track of your progress.
+
+We believe that productivity isn't about doing everything at once. It's about making small improvements every day and becoming a better version of yourself.
+
+Plan your day. Track your progress. Reflect. Improve.</p>
     </main>
-    <section id = aboutodo>
+    <section id = "aboutodo">
 <h3>About ToDo</h3>
+<p>
+    Stay organized and keep track of the things that matter. Our To-Do list helps you create tasks, mark them as completed, and remove tasks when they're no longer needed.
+
+Break your bigger goals into smaller tasks and work through them one step at a time. Keeping your tasks in one place makes it easier to stay focused and see your progress.
+
+Create a task. Get it done. Keep moving forward.
+</p>
     </section>
-    <section id = aboutjournal>
+    <section id = "aboutjournal">
 <h3>About Journal</h3>
+
+<p>
+    Take a moment to slow down and reflect on your day. The Journal gives you a simple place to write down your thoughts, experiences, achievements, and things you want to improve.
+
+Writing regularly can help you understand your habits, recognize your progress, and keep track of the journey toward your goals.
+
+Write it down. Reflect on it. Learn from it. Grow from it.
+
+
+</p>
     </section>
-<!--Contact form-->
+<!--Contact form (not working atm)-->
     <footer id = "contact">
         <div class="form">
 <h3>Contact form</h3>
 
 <form action="submit" method="post">
-    <label for="name">First Name</label>
+    <label for="fname">First Name</label>
     <input type="text" id="fname" name="fname" placeholder="Please Enter First Name" required>
     <label for="name">Last Name</label>
     <input type="name" id="lname" name="lname" placeholder="Please Enter Last Name" required>
     <label for="email">Email</label>
     <input type="email" id="email" name="email" placeholder="@email.com" required>
-    <label for="number">Phone Number</label>
-    <input type="number" id="pnumber" name="pnumber" placeholder="+381xxxxxxxxx" required>
+    <label for="pnumber">Phone Number</label>
+    <input type="tel" id="pnumber" name="pnumber" placeholder="+381xxxxxxxxx" required>
+    <button type="submit">Submit</button>
 </form>
 </div>
     </footer>

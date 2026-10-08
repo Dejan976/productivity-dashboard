@@ -1,4 +1,4 @@
-/* Depending what time is showing message good morning,evening,afternoon*/
+/* Depending what time is, showing message good morning,evening,afternoon*/
 const welcome = document.getElementById("message");
 const time = new Date().getHours();
 if(time < 12){
@@ -87,4 +87,64 @@ const tascCard = createTaskCard(task);
 loadTask();
 addTask.addEventListener("click", () => {
     addNewTask();
+});
+/*Weekly Goals Section*/
+
+let goals = JSON.parse(localStorage.getItem("goals")) || [];
+
+const goalInput = document.getElementById("goal");
+const addGoal = document.getElementById("add");
+const goalsList = document.getElementById("goals");
+
+function createGoal(goal){
+const li = document.createElement("li");
+li.classList.add("goal-card")
+li.dataset.id = goal.id;
+if (goal.completed) {
+    li.classList.add("completed");
+}
+const name = document.createElement("p");
+name.textContent = goal.title;
+const completeBtn = document.createElement("button");
+completeBtn.classList.add("complete-btn");
+completeBtn.textContent="Complete";
+const removeBtn = document.createElement("button");
+removeBtn.classList.add("remove-btn");
+removeBtn.textContent = "Remove";
+li.append(name,completeBtn,removeBtn);
+goalsList.appendChild(li);
+   completeBtn.addEventListener("click", () => {
+        goal.completed = !goal.completed;
+
+        li.classList.toggle("completed", goal.completed);
+
+        localStorage.setItem("goals", JSON.stringify(goals));
+    });
+removeBtn.addEventListener("click", () => {
+    const goalIndex = goals.findIndex(item => item.id === goal.id);
+if (goalIndex !== -1) {
+        goals.splice(goalIndex, 1);
+
+        localStorage.setItem("goals", JSON.stringify(goals));
+    }
+    li.remove();
+});
+}
+    addGoal.addEventListener("click", ()=>{
+    const goalTitle = goalInput.value.trim();
+    if(goalTitle === ""){
+        return;
+    }
+    const goal = {
+        id:Date.now(),
+        title:goalTitle,
+        completed:false
+    };
+    goals.push(goal);
+    localStorage.setItem("goals", JSON.stringify(goals));
+    createGoal(goal);
+    goalInput.value = "";
+})
+goals.forEach(goal =>{
+    createGoal(goal);
 });
