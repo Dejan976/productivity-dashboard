@@ -17,7 +17,15 @@ const priorityInput = document.getElementById("task-priority");
 const dayInput = document.getElementById("task-day");
 const addTask = document.querySelector(".add-task");
 const clearTask = document.querySelector(".clear-task");
-
+/*Clearing last clicked column*/
+clearTask.addEventListener("click",()=>{
+    const day = dayInput.value;
+    tasks = tasks.filter(task=> task.day !== day);
+    localStorage.setItem("tasks",JSON.stringify(tasks));
+    const column = document.getElementById(day);
+    const taskList = column.querySelector("ul");
+    taskList.innerHTML ="";
+})
 
 /*Creating task card*/
 function createTaskCard(task){
