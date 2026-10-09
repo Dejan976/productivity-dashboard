@@ -36,3 +36,24 @@ const url =
     .catch(error => {
         console.log(error);   
      });
+
+
+     /*Journal, Reflection*/
+     const journal = document.getElementById("journal");
+     const didWell = document.getElementById("did-well");
+     const doDifferent = document.getElementById("do-different");
+
+     journal.value = localStorage.getItem("journal") || "";
+     didWell.value = localStorage.getItem("didWell") || "";
+     doDifferent.value = localStorage.getItem("doDifferent") || "";
+
+     journal.addEventListener("input", ()=>{
+        localStorage.setItem("journal", journal.value);
+     });
+     didWell.addEventListener("input",()=>{
+        localStorage.setItem("didWell", didWell.value);
+     });
+     doDifferent.addEventListener("input",()=>{
+        localStorage.setItem("doDifferent", doDifferent.value);
+     });
+
